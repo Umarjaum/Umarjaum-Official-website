@@ -6,7 +6,7 @@ The site is built with Next.js App Router and preserves the real PublishRank int
 
 ## Dynamic SEO origin
 
-Set `NEXT_PUBLIC_SITE_URL` to the actual deployed domain. The shared site configuration uses it for canonical links, Open Graph URLs, JSON-LD entity IDs, sitemap, robots and page metadata. There is no need to edit URLs across individual pages.
+Set `NEXT_PUBLIC_SITE_URL` to the actual deployed domain. The current canonical origin is `https://UmarJaum.vercel.app`. The shared site configuration uses it for canonical links, Open Graph URLs, JSON-LD entity IDs, sitemap, robots and page metadata. There is no need to edit URLs across individual pages.
 
 ## Run locally
 

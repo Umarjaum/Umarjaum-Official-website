@@ -10,4 +10,4 @@
 - [x] Add a custom loader, responsive navigation, accessible FAQ accordions and reduced-motion support.
 - [x] Add dynamic sitemap, robots, manifest and route manifest files.
 - [x] Run the production build and raw HTTP checks for metadata, sitemap, robots and a real noindex 404.
-- [ ] Configure the deployment provider with `NEXT_PUBLIC_SITE_URL` if the public domain changes.
+- [x] Configure the intended deployment origin as `https://UmarJaum.vercel.app` through `NEXT_PUBLIC_SITE_URL`.

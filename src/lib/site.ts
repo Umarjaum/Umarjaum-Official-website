@@ -1,4 +1,4 @@
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://umarjaum.netlify.app").replace(/\/$/, "");
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://UmarJaum.vercel.app").replace(/\/$/, "");
 export const SITE_NAME = "UmarJaum";
 export const LEGAL_NAME = "Muhammad Umar Jabbar";
 export const FATHER_NAME = "Abdul Jabbar";
