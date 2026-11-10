@@ -15,6 +15,7 @@
 
 - [PublishRank official website](https://publishrankseo.vercel.app)
 - [PublishRank on WordPress.org](https://wordpress.org/plugins/publishrank/)
+- [PublishRank WordPress.org support](https://wordpress.org/support/plugin/publishrank/)
 - [PublishRank source on GitHub](https://github.com/Umarjaum/PublishRank)
 
 ## Address history
