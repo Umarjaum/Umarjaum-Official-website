@@ -1,0 +1,16 @@
+{
+  "routes": [
+    { "path": "/", "title": "UmarJaum — Muhammad Umar Jabbar" },
+    { "path": "/about", "title": "About Muhammad Umar Jabbar" },
+    { "path": "/accessibility", "title": "Accessibility" },
+    { "path": "/contact", "title": "Contact UmarJaum" },
+    { "path": "/cookies", "title": "Cookie Policy" },
+    { "path": "/disclaimer", "title": "Disclaimer" },
+    { "path": "/faq", "title": "FAQ" },
+    { "path": "/privacy", "title": "Privacy Policy" },
+    { "path": "/publishrank", "title": "PublishRank" },
+    { "path": "/security", "title": "Security Policy" },
+    { "path": "/terms", "title": "Terms of Use" },
+    { "path": "/work", "title": "Selected Work" }
+  ]
+}
