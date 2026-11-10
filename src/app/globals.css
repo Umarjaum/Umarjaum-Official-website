@@ -11,3 +11,5 @@
 .faq-list-static .faq-static-item{padding:25px 0;border-bottom:1px solid #cfc7ba}
 .faq-list-static h3{margin:0 0 10px;font-size:1.15rem}
 .faq-list-static p{margin:0;padding-right:60px;color:#716b63;line-height:1.7}
+
+.breadcrumb-nav{border-bottom:1px solid #d8d2c8;background:#f6f3ed}.breadcrumb-list{display:flex;flex-wrap:wrap;align-items:center;gap:10px;list-style:none;margin:0;padding:14px 0;color:#716b63;font:500 .72rem var(--font-mono);letter-spacing:.03em}.breadcrumb-list a{color:#716b63}.breadcrumb-list a:hover{color:var(--orange-text);text-decoration:underline;text-underline-offset:3px}.breadcrumb-entry{display:inline-flex;align-items:center;gap:10px}.breadcrumb-separator{color:#a49d92}.breadcrumb-current{color:#171717;font-weight:600}.breadcrumb-list a:focus-visible{outline:2px solid var(--orange-text);outline-offset:3px}

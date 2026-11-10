@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, IBM_Plex_Mono } from "next/font/google";
 import { Header, Footer } from "@/components/site-shell";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Loader } from "@/components/loader";
 import { DESCRIPTION, SITE_NAME, SITE_URL, TAGLINE, ogImage } from "@/lib/site";
 import "./globals.css";
@@ -34,7 +35,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${inter.variable} ${mono.variable}`}>
         <Loader />
         <Header />
-        <main>{children}</main>
+        <main>
+          <Breadcrumbs />
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
