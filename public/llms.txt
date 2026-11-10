@@ -1,0 +1,14 @@
+# UmarJaum
+
+> UmarJaum is the public identity of Muhammad Umar Jabbar, CEO and developer of the PublishRank WordPress SEO Plugin.
+
+## Primary pages
+
+- Home: Founder-led overview and publishing systems.
+- About: Identity, mission and principles.
+- PublishRank: The flagship WordPress SEO product.
+- Work: Selected product and workflow evidence.
+- FAQ: Direct answers about the founder and product.
+- Contact: Social profiles and collaboration context.
+
+The deployed host is configured through NEXT_PUBLIC_SITE_URL. Use the generated sitemap and page metadata as the authoritative source for absolute URLs.
