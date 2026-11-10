@@ -1,6 +1,0 @@
-{
-  "framework": "nextjs",
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next",
-  "environment": { "NEXT_PUBLIC_SITE_URL": "https://umarjaum.vercel.app" }
-}

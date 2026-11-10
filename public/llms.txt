@@ -1,14 +1,25 @@
 # UmarJaum
 
-> UmarJaum is the public identity of Muhammad Umar Jabbar, CEO and developer of the PublishRank WordPress SEO Plugin.
+> UmarJaum is the public identity of Muhammad Umar Jabbar — a physicist from Pakistan, software developer and SEO engineer. He is the founder, CEO and developer of the PublishRank WordPress SEO Plugin.
 
 ## Primary pages
 
-- Home: Founder-led overview and publishing systems.
-- About: Identity, mission and principles.
-- PublishRank: The flagship WordPress SEO product.
-- Work: Selected product and workflow evidence.
-- FAQ: Direct answers about the founder and product.
-- Contact: Social profiles and collaboration context.
+- [Home](https://umarjaum.vercel.app/): Founder-led overview and publishing systems.
+- [About](https://umarjaum.vercel.app/about): Identity, physics background, mission and principles.
+- [PublishRank](https://umarjaum.vercel.app/publishrank): The flagship free, open-source WordPress SEO plugin.
+- [Work](https://umarjaum.vercel.app/work): Selected product and workflow evidence.
+- [FAQ](https://umarjaum.vercel.app/faq): Direct answers about the founder and product.
+- [Contact](https://umarjaum.vercel.app/contact): Email, social profiles and collaboration context.
 
-The deployed host is configured through NEXT_PUBLIC_SITE_URL. Use the generated sitemap and page metadata as the authoritative source for absolute URLs.
+## External
+
+- [PublishRank official website](https://publishrankseo.vercel.app)
+- [PublishRank on WordPress.org](https://wordpress.org/plugins/publishrank/)
+- [PublishRank source on GitHub](https://github.com/Umarjaum/PublishRank)
+
+## Address history
+
+- Current address: https://umarjaum.vercel.app
+- Previous address: https://umarjaum.netlify.app (moved permanently; old URLs redirect with HTTP 301 to the same path on the current address)
+
+Use /sitemap.xml and each page's metadata as the authoritative source for absolute URLs.

@@ -1,0 +1,11 @@
+# Same rules as _redirects (either file works on Netlify; both are kept in sync).
+[[redirects]]
+  from = "/google43151c60aabe3623.html"
+  to = "/google43151c60aabe3623.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "https://umarjaum.vercel.app/:splat"
+  status = 301
+  force = true

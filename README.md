@@ -1,26 +1,29 @@
-# UmarJaum Official Website
+# Welcome to your Lovable project
 
-A founder-led website for Muhammad Umar Jabbar, known publicly as UmarJaum, CEO and developer of the PublishRank WordPress SEO Plugin.
+This project was built with [Lovable](https://lovable.dev).
 
-The site is built with Next.js App Router and preserves the real PublishRank interface captures from the official PublishRank website. It includes a large homepage plus About, PublishRank, Work, FAQ, Contact and Privacy pages.
+## Build with Lovable
 
-## Dynamic SEO origin
+Open your project in the [Lovable editor](https://lovable.dev) and keep building.
 
-Set `NEXT_PUBLIC_SITE_URL` to the actual deployed domain. The current canonical origin is `https://umarjaum.vercel.app`. The shared site configuration uses it for canonical links, Open Graph URLs, JSON-LD entity IDs, sitemap, robots and page metadata. There is no need to edit URLs across individual pages.
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
+- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
 
-## Run locally
+## Development
 
-```bash
-npm install
-cp .env.example .env.local
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+```sh
+git clone <this-repository-url>
+cd <repository-name>
+npm i
 npm run dev
 ```
 
-## Build
+## Built with
 
-```bash
-npm run build
-npm start
-```
-
-The site also serves `/manus-routes.json`, `/llms.txt`, `/sitemap.xml`, `/robots.txt` and `/manifest.webmanifest`. Discovery endpoints remain available to crawlers and direct requests but are intentionally not visible in the site navigation. Legal pages include Privacy, Terms, Cookies, Disclaimer, Security and Accessibility. The site currently has no Google AdSense or other advertising network; do not add `ads.txt` until a real publisher ID is available, and update consent disclosures before enabling personalized advertising.
+- TanStack Start
+- TypeScript
+- React
+- Tailwind CSS

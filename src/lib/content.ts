@@ -1,10 +1,38 @@
+import dashboard from "@/assets/screens/01-publishrank-dashboard.png.asset.json";
+import features from "@/assets/screens/03-publishrank-features.png.asset.json";
+import sitemapHub from "@/assets/screens/07-publishrank-sitemap-hub.png.asset.json";
+import schema from "@/assets/screens/08-publishrank-schema-markup.png.asset.json";
+import searchConsole from "@/assets/screens/09-publishrank-search-console.png.asset.json";
+import llms from "@/assets/screens/17-publishrank-llms-txt.png.asset.json";
+import author from "@/assets/screens/19-publishrank-author-expertise.png.asset.json";
+import links from "@/assets/screens/22-publishrank-link-intelligence.png.asset.json";
+import seoScore from "@/assets/screens/28-publishrank-seo-score.png.asset.json";
+import analytics from "@/assets/screens/29-publishrank-analytics.png.asset.json";
+import newsroom from "@/assets/screens/34-publishrank-newsroom.png.asset.json";
+import calendar from "@/assets/screens/36-publishrank-newsroom-calendar.png.asset.json";
+
+export const screens = {
+  dashboard: dashboard.url,
+  features: features.url,
+  sitemapHub: sitemapHub.url,
+  schema: schema.url,
+  searchConsole: searchConsole.url,
+  llms: llms.url,
+  author: author.url,
+  links: links.url,
+  seoScore: seoScore.url,
+  analytics: analytics.url,
+  newsroom: newsroom.url,
+  calendar: calendar.url,
+};
+
 export const nav = [
-  { href: "/about", label: "About" },
-  { href: "/publishrank", label: "PublishRank" },
-  { href: "/work", label: "Work" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "Contact" },
-];
+  { to: "/about", label: "About" },
+  { to: "/publishrank", label: "PublishRank" },
+  { to: "/work", label: "Work" },
+  { to: "/faq", label: "FAQ" },
+  { to: "/contact", label: "Contact" },
+] as const;
 
 export const principles = [
   {
@@ -42,53 +70,85 @@ export const capabilities = [
     "Mastodon publishing with featured-image accessibility text and per-post content warnings.",
   ],
   [
+    "Physics-minded engineering",
+    "Model the system, measure the signal, and trust evidence over assumptions.",
+  ],
+  [
     "Founder-led execution",
     "Product direction, architecture, release discipline and the details between them.",
   ],
+] as const;
+
+export const stats: { value?: number; display?: string; suffix?: string; label: string }[] = [
+  { value: 41, suffix: "+", label: "Publisher tools in PublishRank" },
+  { value: 100, suffix: "%", label: "Free & open source" },
+  { display: "v2.19.2", label: "Current PublishRank release" },
+  { value: 0, label: "Ads or trackers on this site" },
 ];
 
 export const faqs = [
   [
     "Who is UmarJaum?",
-    "UmarJaum is the public identity of Muhammad Umar Jabbar, a developer and entrepreneur focused on practical publishing technology. He is the CEO and developer of the PublishRank WordPress SEO Plugin.",
+    "UmarJaum is the public identity of Muhammad Umar Jabbar, a physicist from Pakistan, developer and SEO engineer. He is the founder, CEO and developer of the PublishRank WordPress SEO Plugin.",
   ],
   [
     "What is PublishRank?",
     "PublishRank is a free, open-source WordPress SEO plugin for publishers, newsrooms, magazines, bloggers and content-heavy sites. It combines metadata, schema, sitemaps, redirects, diagnostics, Mastodon publishing and editorial tooling.",
   ],
   [
+    "Is PublishRank on WordPress.org?",
+    "Yes. PublishRank is listed in the official WordPress.org plugin directory, so it can be installed directly from the WordPress dashboard or downloaded from its GitHub releases.",
+  ],
+  [
+    "How does a background in physics shape the work?",
+    "Physics trains you to model a system, measure it and trust evidence over assumptions. That same discipline drives how PublishRank exposes SEO decisions: inspectable, testable and explainable.",
+  ],
+  [
     "Where can I find the PublishRank website?",
-    "The official PublishRank website is available at publishrankseo.vercel.app. Its source and releases are linked from the PublishRank page on this site.",
+    "PublishRank has its own official website, linked from the PublishRank page, the top bar and the footer of this site, along with its source code and releases.",
   ],
   [
     "Can I collaborate or ask about a project?",
     "Yes. Use the contact page or reach out through the listed social profiles. Include the context, the outcome you want and the best way to continue the conversation.",
   ],
-];
+] as const;
 
 export const work = [
   {
     id: "publishrank",
     title: "PublishRank",
     type: "Flagship product",
-    href: "/publishrank",
-    image: "/media/screens/publishrank-2.12.1/desktop-1440/01-publishrank-dashboard.png",
+    to: "/publishrank",
+    image: screens.dashboard,
     text: "A publisher-first WordPress SEO system with real editorial and technical controls.",
   },
   {
     id: "observability",
     title: "SEO observability",
     type: "Product direction",
-    href: "/publishrank#observability",
-    image: "/media/screens/publishrank-2.12.1/desktop-1440/08-publishrank-schema-markup.png",
+    to: "/publishrank",
+    hash: "observability",
+    image: screens.schema,
     text: "Connected JSON-LD, schema diagnostics and a clearer path from settings to rendered output.",
   },
   {
     id: "newsroom",
     title: "The newsroom layer",
     type: "Workflow design",
-    href: "/publishrank#newsroom",
-    image: "/media/screens/publishrank-2.12.1/desktop-1440/34-publishrank-newsroom.png",
+    to: "/publishrank",
+    hash: "newsroom",
+    image: screens.newsroom,
     text: "Editorial roles, planning, activity and release discipline inside WordPress.",
   },
+] as const;
+
+export const featureGallery = [
+  { title: "Sitemap hub", tag: "Discovery", image: screens.sitemapHub },
+  { title: "Search Console", tag: "Insights", image: screens.searchConsole },
+  { title: "llms.txt", tag: "AI discovery", image: screens.llms },
+  { title: "Author expertise", tag: "E-E-A-T", image: screens.author },
+  { title: "Link intelligence", tag: "Internal links", image: screens.links },
+  { title: "Analytics", tag: "Measurement", image: screens.analytics },
+  { title: "Editorial calendar", tag: "Newsroom", image: screens.calendar },
+  { title: "Feature control", tag: "Modules", image: screens.features },
 ];

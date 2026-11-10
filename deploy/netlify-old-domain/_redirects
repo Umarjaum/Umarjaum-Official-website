@@ -1,0 +1,5 @@
+# Old address umarjaum.netlify.app has moved permanently to umarjaum.vercel.app.
+# Keep the Google Search Console verification file reachable on the old site (needed for "Change of address").
+/google43151c60aabe3623.html  /google43151c60aabe3623.html  200
+# Everything else: permanent (301) redirect to the same path on the new address.
+/*  https://umarjaum.vercel.app/:splat  301!
