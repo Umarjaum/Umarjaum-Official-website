@@ -79,6 +79,29 @@ export const capabilities = [
   ],
 ] as const;
 
+export const workflow = [
+  {
+    number: "01",
+    title: "Frame the problem",
+    text: "Start with the publishing goal, the audience and the constraints already shaping the system.",
+  },
+  {
+    number: "02",
+    title: "Inspect the signal",
+    text: "Trace the path from editorial intent to rendered output, search discovery and measurable evidence.",
+  },
+  {
+    number: "03",
+    title: "Build the useful layer",
+    text: "Turn the findings into focused product decisions, clearer interfaces and tools a real desk can use.",
+  },
+  {
+    number: "04",
+    title: "Explain and ship",
+    text: "Document the decision, test the result and leave the next person with a system they can trust.",
+  },
+] as const;
+
 export const stats: { value?: number; display?: string; suffix?: string; label: string }[] = [
   { value: 41, suffix: "+", label: "Publisher tools in PublishRank" },
   { value: 100, suffix: "%", label: "Free & open source" },

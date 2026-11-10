@@ -20,7 +20,7 @@ import { usePageMotion } from "@/components/site/motion";
 import { SectionHead } from "@/components/site/SectionHead";
 import { SocialCards } from "@/components/site/SocialIcons";
 import { Spotlight } from "@/components/site/Spotlight";
-import { capabilities, faqs, principles, screens, stats, work } from "@/lib/content";
+import { capabilities, faqs, principles, screens, stats, workflow, work } from "@/lib/content";
 import { faqSchema, pageHead, softwareSchema } from "@/lib/seo";
 import { DESCRIPTION, PUBLISHRANK_URL, PUBLISHRANK_VERSION, PUBLISHRANK_WPORG } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -42,6 +42,7 @@ export const Route = createFileRoute("/")({
 });
 
 const capabilityIcons = [Network, Braces, Compass, Megaphone, Atom, Rocket];
+const workflowIcons = [Compass, Network, Braces, Rocket];
 
 function Home() {
   const ref = useRef<HTMLDivElement>(null);
@@ -309,6 +310,42 @@ function Home() {
               Read the full story <ArrowRight className="size-4" />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* WORKFLOW */}
+      <section className="wrap py-20 md:py-28">
+        <SectionHead
+          eyebrow="How the work moves"
+          title={
+            <>
+              Clarity is a process,{" "}
+              <span className="serif-accent text-signal-gradient">not a promise.</span>
+            </>
+          }
+          intro="Good publishing infrastructure should make the next decision easier. This is the loop behind the product work: start with context, follow the evidence and ship something people can explain."
+        />
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4" data-stagger>
+          {workflow.map((step, index) => {
+            const Icon = workflowIcons[index] ?? Compass;
+            return (
+              <Spotlight
+                key={step.number}
+                className="group flex min-h-64 flex-col justify-between p-7"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <span className="grid size-11 place-items-center rounded-2xl border border-border bg-background/40 text-primary transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110">
+                    <Icon className="size-5" />
+                  </span>
+                  <span className="font-mono text-sm text-primary">{step.number}</span>
+                </div>
+                <div>
+                  <h3 className="mt-10 text-xl font-semibold tracking-tight">{step.title}</h3>
+                  <p className="mt-3 leading-relaxed text-muted-foreground">{step.text}</p>
+                </div>
+              </Spotlight>
+            );
+          })}
         </div>
       </section>
 
