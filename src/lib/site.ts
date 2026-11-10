@@ -1,7 +1,8 @@
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://UmarJaum.vercel.app").replace(/\/$/, "");
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://umarjaum.vercel.app").replace(/\/$/, "").toLowerCase();
 export const SITE_NAME = "UmarJaum";
 export const LEGAL_NAME = "Muhammad Umar Jabbar";
 export const FATHER_NAME = "Abdul Jabbar";
+export const CONTACT_EMAIL = "UmarJaum@gmail.com";
 export const TAGLINE = "Engineering the systems behind better publishing.";
 export const DESCRIPTION =
   "UmarJaum is the founder, CEO and developer of PublishRank, building practical WordPress SEO and publishing infrastructure for modern editorial teams.";
@@ -41,6 +42,9 @@ export function organizationSchema() {
     legalName: LEGAL_NAME,
     url: SITE_URL,
     founder: { "@id": `${SITE_URL}/#person` },
+    email: CONTACT_EMAIL,
+    description: DESCRIPTION,
+    contactPoint: [{ "@type": "ContactPoint", contactType: "general inquiries", email: CONTACT_EMAIL, availableLanguage: ["English"] }],
     sameAs: Object.values(SOCIALS),
     logo: { "@type": "ImageObject", url: ogImage() },
   };
