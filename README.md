@@ -23,4 +23,4 @@ npm run build
 npm start
 ```
 
-The site also serves `/manus-routes.json`, `/llms.txt`, `/sitemap.xml`, `/robots.txt` and `/manifest.webmanifest`.
+The site also serves `/manus-routes.json`, `/llms.txt`, `/sitemap.xml`, `/robots.txt` and `/manifest.webmanifest`. Discovery endpoints remain available to crawlers and direct requests but are intentionally not visible in the site navigation. Legal pages include Privacy, Terms, Cookies, Disclaimer, Security and Accessibility. The site currently has no Google AdSense or other advertising network; do not add `ads.txt` until a real publisher ID is available, and update consent disclosures before enabling personalized advertising.

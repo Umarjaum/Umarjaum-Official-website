@@ -2,12 +2,12 @@ import Link from "next/link";
 import { Evidence } from "@/components/evidence";
 import { JsonLd } from "@/components/json-ld";
 import { capabilities, faqs, principles, work } from "@/lib/content";
-import { absoluteUrl, baseGraph, DESCRIPTION, SITE_NAME, TAGLINE } from "@/lib/site";
+import { absoluteUrl, baseGraph, DESCRIPTION, SITE_NAME, softwareSchema, TAGLINE } from "@/lib/site";
 
 export const metadata = { title: TAGLINE, description: DESCRIPTION, alternates: { canonical: absoluteUrl("/") }, openGraph: { title: `${SITE_NAME} — ${TAGLINE}`, description: DESCRIPTION, url: absoluteUrl("/") } };
 
 export default function Home() {
-  const graph = { ...baseGraph("/"), "@graph": [...baseGraph("/")["@graph"], { "@type": "FAQPage", "@id": `${absoluteUrl("/")}#faq`, mainEntity: faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) }] };
+  const graph = { ...baseGraph("/"), "@graph": [...baseGraph("/")["@graph"], softwareSchema(), { "@type": "FAQPage", "@id": `${absoluteUrl("/")}#faq`, mainEntity: faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) }] };
   return <>
     <section className="hero"><div className="wrap hero-grid"><div><p className="eyebrow">Independent builder / CEO / developer</p><h1>Build the system.<br /><em>Explain the signal.</em></h1><p className="lede">I’m Muhammad Umar Jabbar — known publicly as UmarJaum — and I build practical infrastructure for people who publish, review and grow ideas on the web.</p><div className="hero-actions"><Link className="button button-primary" href="/about">Meet the founder ↗</Link><Link className="button button-ghost" href="/publishrank">See PublishRank</Link></div><p className="hero-note">LEGAL NAME / Muhammad Umar Jabbar &nbsp;·&nbsp; FATHER / Abdul Jabbar</p></div><div className="hero-evidence"><Evidence src="/media/screens/publishrank-2.12.1/desktop-1440/01-publishrank-dashboard.png" alt="Real PublishRank dashboard in WordPress admin" label="PUBLISHRANK / DASHBOARD" caption="A real product surface from PublishRank — the flagship WordPress SEO plugin I lead as CEO and developer." /></div></div></section>
     <div className="signal-strip"><div className="wrap signal-track"><span>SEO is infrastructure</span><span>Built for publishing desks</span><span>Evidence over hype</span><span>Open source where it matters</span></div></div>

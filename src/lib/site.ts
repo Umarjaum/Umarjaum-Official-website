@@ -50,8 +50,40 @@ export function organizationSchema() {
   };
 }
 
+export function softwareSchema() {
+  return {
+    "@type": "SoftwareApplication",
+    "@id": `${PUBLISHRANK_URL}/#software`,
+    name: "PublishRank",
+    url: PUBLISHRANK_URL,
+    applicationCategory: "BusinessApplication",
+    applicationSubCategory: "WordPress SEO plugin",
+    operatingSystem: "WordPress",
+    softwareVersion: "2.19.2",
+    isAccessibleForFree: true,
+    description: "Free, open-source WordPress SEO plugin for publishers and newsrooms, with metadata, connected schema, sitemaps, redirects and editorial workflow tools.",
+    downloadUrl: DOWNLOAD_URL,
+    creator: { "@id": `${SITE_URL}/#person`, name: LEGAL_NAME, url: SITE_URL },
+    publisher: { "@id": `${PUBLISHRANK_URL}/#organization`, name: "PublishRank", url: PUBLISHRANK_URL },
+    featureList: [
+      "News and XML sitemaps",
+      "Connected JSON-LD schema",
+      "SEO metadata and social previews",
+      "Redirects and 404 monitoring",
+      "Newsroom editorial workflows",
+      "Crawl optimization and robots controls",
+    ],
+    sameAs: [PUBLISHRANK_URL, PUBLISHRANK_REPO, SITE_URL],
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD", url: DOWNLOAD_URL },
+    image: `${PUBLISHRANK_URL}/brand/publishrank-og-share-card.jpg`,
+  };
+}
+
 export function baseGraph(path = "/") {
   const url = absoluteUrl(path);
+  const segments = path.split("/").filter(Boolean);
+  const labels: Record<string, string> = { about: "About", publishrank: "PublishRank", work: "Work", faq: "FAQ", contact: "Contact", privacy: "Privacy", terms: "Terms", cookies: "Cookies", disclaimer: "Disclaimer", security: "Security", accessibility: "Accessibility" };
+  const breadcrumbItems = [{ "@type": "ListItem", position: 1, name: "Home", item: SITE_URL }, ...segments.map((segment, index) => ({ "@type": "ListItem", position: index + 2, name: labels[segment] ?? segment, item: absoluteUrl(`/${segments.slice(0, index + 1).join("/")}`) }))];
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -59,6 +91,7 @@ export function baseGraph(path = "/") {
       organizationSchema(),
       { "@type": "WebSite", "@id": `${SITE_URL}/#website`, url: SITE_URL, name: SITE_NAME, description: DESCRIPTION, publisher: { "@id": `${SITE_URL}/#organization` } },
       { "@type": "WebPage", "@id": `${url}/#webpage`, url, name: SITE_NAME, isPartOf: { "@id": `${SITE_URL}/#website` }, about: { "@id": `${SITE_URL}/#person` } },
+      { "@type": "BreadcrumbList", "@id": `${url}/#breadcrumb`, itemListElement: breadcrumbItems },
     ],
   };
 }
