@@ -204,14 +204,24 @@ function PublishRank() {
               Docs, changelog and launch notes.
             </h2>
           </div>
-          <a
-            href={PUBLISHRANK_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={ctaVariants({ variant: "signal", size: "lg" })}
-          >
-            Visit the official website <ArrowUpRight className="size-4" />
-          </a>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={`${PUBLISHRANK_URL}/features#all-features`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={ctaVariants({ variant: "signal", size: "lg" })}
+            >
+              Browse the complete feature directory <ArrowUpRight className="size-4" />
+            </a>
+            <a
+              href={PUBLISHRANK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={ctaVariants({ variant: "glass", size: "lg" })}
+            >
+              Visit the official website <ArrowUpRight className="size-4" />
+            </a>
+          </div>
         </div>
       </section>
     </div>

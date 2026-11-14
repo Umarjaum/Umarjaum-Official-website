@@ -16,9 +16,9 @@ export const PUBLISHRANK_URL = "https://publishrankseo.vercel.app";
 export const PUBLISHRANK_REPO = "https://github.com/Umarjaum/PublishRank";
 export const PUBLISHRANK_RELEASES = "https://github.com/Umarjaum/PublishRank/releases";
 export const PUBLISHRANK_WPORG = "https://wordpress.org/plugins/publishrank/";
-export const PUBLISHRANK_VERSION = "2.19.2";
+export const PUBLISHRANK_VERSION = "2.20.20";
 export const DOWNLOAD_URL =
-  "https://github.com/Umarjaum/PublishRank/releases/latest/download/PublishRank.zip";
+  "https://github.com/Umarjaum/PublishRank/releases/download/v2.20.20/PublishRank-2.20.20.zip";
 export const GITHUB_URL = "https://github.com/Umarjaum";
 
 export const SOCIALS = {
