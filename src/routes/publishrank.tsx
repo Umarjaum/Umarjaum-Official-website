@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowUpRight,
+  Building2,
   Download,
   Github,
   Newspaper,
@@ -31,12 +32,12 @@ export const Route = createFileRoute("/publishrank")({
   head: () =>
     pageHead({
       path: "/publishrank",
-      title: "PublishRank — Free WordPress SEO Plugin for Publishers by UmarJaum",
+      title: "PublishRank — WordPress SEO for Businesses and Every Website by UmarJaum",
       description:
-        "PublishRank is the free, open-source WordPress SEO plugin built by UmarJaum for publishers and newsrooms: news sitemaps, connected schema, Mastodon publishing and llms.txt discovery.",
+        "PublishRank is free, open-source WordPress SEO for businesses and every website, including Local SEO for 134 selectable business options across 14 niches, plus specialist publisher tools.",
       image: "/og/og-publishrank.jpg",
       imageAlt:
-        "PublishRank — free WordPress SEO plugin for publishers, shown in the WordPress admin",
+        "PublishRank — free WordPress SEO plugin for businesses, publishers and websites of every kind",
       extraGraph: [softwareSchema()],
     }),
   component: PublishRank,
@@ -44,28 +45,34 @@ export const Route = createFileRoute("/publishrank")({
 
 const tools = [
   {
-    id: "mastodon",
-    Icon: Share2,
-    title: "Mastodon publishing",
-    text: "Share posts with optional featured images, accessibility text and per-post content warnings.",
+    id: "local-seo",
+    Icon: Building2,
+    title: "Local SEO for 134 business types",
+    text: "Create business profiles across 14 niches, with service areas, hidden-address settings, hours and industry-specific LocalBusiness fields. The selectable profiles are not 134 independent schema classes.",
   },
   {
-    id: "observability",
+    id: "sitewide-seo",
     Icon: Sparkles,
-    title: "Schema Aggregator endpoint",
-    text: "Expose a machine-readable view of connected structured data across the whole site.",
+    title: "Sitewide SEO and structured data",
+    text: "Manage metadata, canonical URLs, social previews, connected schema and diagnostics across business pages, products, services and articles.",
   },
   {
     id: "discovery",
     Icon: Newspaper,
-    title: "llms.txt & news discovery",
-    text: "Publish an optional guide for AI crawlers alongside news and XML sitemaps.",
+    title: "Search discovery and technical controls",
+    text: "Use XML and News Sitemaps, IndexNow, redirects, crawl controls and optional llms.txt to support discovery across WordPress sites.",
+  },
+  {
+    id: "publishing-workflows",
+    Icon: Share2,
+    title: "Publisher tools when you need them",
+    text: "Mastodon publishing, newsroom workflows, article review and editorial diagnostics support publishers without limiting the plugin to publishing sites.",
   },
   {
     id: "newsroom",
     Icon: Workflow,
     title: "Editorial operations",
-    text: "Connect article review, newsroom workflows, redirects and technical diagnostics.",
+    text: "Connect story review, newsroom assignments, redirects and technical diagnostics for content teams.",
   },
 ];
 
@@ -81,11 +88,11 @@ function PublishRank() {
           <>
             PublishRank is SEO{" "}
             <span className="serif-accent text-signal-gradient">
-              infrastructure for publishers.
+              for businesses and every WordPress site.
             </span>
           </>
         }
-        intro="A free, open-source WordPress plugin for the work between writing a story and helping the right people find it."
+        intro="A free, open-source WordPress plugin for businesses and website owners: sitewide SEO plus Local SEO for 134 selectable business options across 14 niches, with newsroom and editorial tools for publishers too."
       >
         <div className="flex flex-wrap gap-3">
           <Magnetic>
@@ -126,8 +133,8 @@ function PublishRank() {
       <section className="wrap py-16 md:py-24">
         <SectionHead
           eyebrow="Beyond metadata"
-          title="Publishing tools that go further."
-          intro="AI discovery tools are available today; none of them guarantees rankings, rich results or AI citations."
+          title="SEO for businesses, sites and publishers."
+          intro="PublishRank supports businesses and WordPress websites of every kind with sitewide SEO and Local SEO. Publisher and newsroom workflows are included as specialist tools, not a requirement to use the plugin. No SEO tool guarantees rankings or rich results."
         />
         <div className="grid gap-4 md:grid-cols-2" data-stagger>
           {tools.map(({ id, Icon, title, text }) => (

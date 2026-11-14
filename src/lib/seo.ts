@@ -109,13 +109,15 @@ export function softwareSchema() {
     isAccessibleForFree: true,
     license: "https://www.gnu.org/licenses/gpl-2.0.html",
     description:
-      "Free, open-source WordPress SEO plugin for publishers and newsrooms, with metadata, connected schema, sitemaps, redirects and editorial workflow tools.",
+      "Free, open-source WordPress SEO for businesses and websites of every kind, including Local SEO for 134 selectable business options across 14 niches, sitewide metadata, schema, sitemaps and specialist editorial tools.",
     downloadUrl: DOWNLOAD_URL,
     installUrl: PUBLISHRANK_WPORG,
     creator: { "@id": `${SITE_URL}/#person`, name: LEGAL_NAME, url: SITE_URL },
     author: { "@id": `${SITE_URL}/#person` },
     publisher: { "@id": `${SITE_URL}/#organization` },
     featureList: [
+      "Local SEO for 134 selectable business options across 14 niches",
+      "Business profiles with service areas, location settings and type-specific fields",
       "News and XML sitemaps",
       "Connected JSON-LD schema and Schema Aggregator endpoint",
       "SEO metadata and social previews",

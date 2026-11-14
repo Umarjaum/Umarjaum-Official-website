@@ -54,8 +54,12 @@ export const principles = [
 
 export const capabilities = [
   [
-    "Publishing infrastructure",
-    "WordPress tools that connect editorial workflows with technical SEO.",
+    "SEO for every WordPress site",
+    "Sitewide tools for business pages, products, services, articles and other WordPress content.",
+  ],
+  [
+    "Local SEO for 134 business types",
+    "Selectable business profiles across 14 niches, with service areas, location details and type-specific fields.",
   ],
   [
     "Structured data",
@@ -63,7 +67,7 @@ export const capabilities = [
   ],
   [
     "Discovery systems",
-    "News and XML sitemaps, IndexNow, robots controls and optional llms.txt discovery.",
+    "XML and News Sitemaps, IndexNow, robots controls and optional llms.txt discovery.",
   ],
   [
     "Social publishing",
@@ -83,17 +87,17 @@ export const workflow = [
   {
     number: "01",
     title: "Frame the problem",
-    text: "Start with the publishing goal, the audience and the constraints already shaping the system.",
+    text: "Start with the business or publishing goal, the audience and the constraints already shaping the system.",
   },
   {
     number: "02",
     title: "Inspect the signal",
-    text: "Trace the path from editorial intent to rendered output, search discovery and measurable evidence.",
+    text: "Trace the path from site-owner intent to rendered output, search discovery and measurable evidence.",
   },
   {
     number: "03",
     title: "Build the useful layer",
-    text: "Turn the findings into focused product decisions, clearer interfaces and tools a real desk can use.",
+    text: "Turn findings into focused product decisions, clearer interfaces and tools real WordPress teams can use.",
   },
   {
     number: "04",
@@ -103,7 +107,7 @@ export const workflow = [
 ] as const;
 
 export const stats: { value?: number; display?: string; suffix?: string; label: string }[] = [
-  { value: 41, suffix: "+", label: "Publisher tools in PublishRank" },
+  { value: 41, suffix: "+", label: "Built-in SEO tools" },
   { value: 100, suffix: "%", label: "Free & open source" },
   { display: "v2.20.20", label: "Current PublishRank release" },
   { value: 0, label: "Ads or trackers on this site" },
@@ -116,7 +120,7 @@ export const faqs = [
   ],
   [
     "What is PublishRank?",
-    "PublishRank is a free, open-source WordPress SEO plugin for publishers, newsrooms, magazines, bloggers and content-heavy sites. It combines metadata, schema, sitemaps, redirects, diagnostics, Mastodon publishing and editorial tooling.",
+    "PublishRank is a free, open-source WordPress SEO plugin for businesses and websites of every kind, including publishers and newsrooms. It combines sitewide metadata, schema, sitemaps, redirects, diagnostics, Local SEO for 134 selectable business options across 14 niches, and specialist editorial tools.",
   ],
   [
     "Is PublishRank on WordPress.org?",
@@ -143,7 +147,7 @@ export const work = [
     type: "Flagship product",
     to: "/publishrank",
     image: screens.dashboard,
-    text: "A publisher-first WordPress SEO system with real editorial and technical controls.",
+    text: "A cross-industry WordPress SEO system with Local SEO for 134 business options, plus editorial and technical controls.",
   },
   {
     id: "observability",
