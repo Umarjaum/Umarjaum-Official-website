@@ -109,7 +109,7 @@ export const workflow = [
 export const stats: { value?: number; display?: string; suffix?: string; label: string }[] = [
   { value: 41, suffix: "+", label: "Built-in SEO tools" },
   { value: 100, suffix: "%", label: "Free & open source" },
-  { display: "v2.20.20", label: "Current PublishRank release" },
+  { display: "v2.21.0", label: "Current PublishRank release" },
   { value: 0, label: "Ads or trackers on this site" },
 ];
 

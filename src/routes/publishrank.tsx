@@ -33,8 +33,7 @@ export const Route = createFileRoute("/publishrank")({
     pageHead({
       path: "/publishrank",
       title: "PublishRank — WordPress SEO for Businesses and Every Website by UmarJaum",
-      description:
-        "PublishRank is free, open-source WordPress SEO for businesses and every website, including Local SEO for 134 selectable business options across 14 niches, plus specialist publisher tools.",
+      description: `PublishRank ${PUBLISHRANK_VERSION} is free, open-source WordPress SEO for businesses and every website, including Local SEO for 134 selectable business options, WooCommerce SEO and specialist publishing tools.`,
       image: "/og/og-publishrank.jpg",
       imageAlt:
         "PublishRank — free WordPress SEO plugin for businesses, publishers and websites of every kind",
@@ -44,6 +43,24 @@ export const Route = createFileRoute("/publishrank")({
 });
 
 const tools = [
+  {
+    id: "release-2-21-editor",
+    Icon: Sparkles,
+    title: `New in v${PUBLISHRANK_VERSION}: a movable SEO workspace`,
+    text: "Keep SEO fields, live previews and analysis together in a draggable editor window, with consistent SEO scoring across the editor, toolbar, post list, Insights and audits.",
+  },
+  {
+    id: "release-2-21-operations",
+    Icon: Workflow,
+    title: "Better site operations and navigation",
+    text: "Review clearer 404 logs, import/export and trace redirects, configure RSS feed controls, and inspect important pages for indexability, sitemap coverage, internal links, canonicals and descriptions.",
+  },
+  {
+    id: "release-2-21-commerce-language",
+    Icon: Share2,
+    title: "WooCommerce and language-aware SEO",
+    text: "When WooCommerce is active, connect Product schema to the graph. SEO analysis also recognizes Arabic and Urdu, with optional dismissible English inclusive-language suggestions.",
+  },
   {
     id: "local-seo",
     Icon: Building2,
@@ -92,7 +109,7 @@ function PublishRank() {
             </span>
           </>
         }
-        intro="A free, open-source WordPress plugin for businesses and website owners: sitewide SEO plus Local SEO for 134 selectable business options across 14 niches, with newsroom and editorial tools for publishers too."
+        intro={`Version ${PUBLISHRANK_VERSION} is a free, open-source WordPress plugin for businesses and website owners: sitewide SEO plus Local SEO for 134 selectable business options across 14 niches, with newsroom and editorial tools for publishers too.`}
       >
         <div className="flex flex-wrap gap-3">
           <Magnetic>

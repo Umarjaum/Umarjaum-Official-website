@@ -118,6 +118,11 @@ export function softwareSchema() {
     featureList: [
       "Local SEO for 134 selectable business options across 14 niches",
       "Business profiles with service areas, location settings and type-specific fields",
+      "Movable SEO editor and consistent scoring across the editor, toolbar, lists, Insights and audits",
+      "404 Monitor refinements, RSS feed controls and Site Navigation SEO",
+      "WooCommerce Product schema integration when WooCommerce is active",
+      "Redirect CSV import/export, bulk management, chain tracing and regex captures",
+      "English, Arabic and Urdu analysis with optional dismissible inclusive-language suggestions",
       "News and XML sitemaps",
       "Connected JSON-LD schema and Schema Aggregator endpoint",
       "SEO metadata and social previews",
