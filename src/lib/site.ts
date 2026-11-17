@@ -10,15 +10,14 @@ export const LEGAL_NAME = "Muhammad Umar Jabbar";
 export const CONTACT_EMAIL = "UmarJaum@gmail.com";
 export const TAGLINE = "Physicist, developer & SEO engineer behind PublishRank";
 export const DESCRIPTION =
-  "UmarJaum (Muhammad Umar Jabbar) is a physicist from Pakistan and the founder, developer and SEO engineer of PublishRank — cross-industry WordPress SEO with Local SEO for 134 selectable business options, plus publishing tools for editorial teams.";
+  "UmarJaum (Muhammad Umar Jabbar) is a physicist from Pakistan and the founder, developer and SEO engineer of PublishRank — cross-industry WordPress SEO with Local SEO for 134 selectable business options and publishing tools. PublishRank 2.25.0 is an experimental candidate, not a production release.";
 
 export const PUBLISHRANK_URL = "https://publishrankseo.vercel.app";
 export const PUBLISHRANK_REPO = "https://github.com/Umarjaum/PublishRank";
 export const PUBLISHRANK_RELEASES = "https://github.com/Umarjaum/PublishRank/releases";
 export const PUBLISHRANK_WPORG = "https://wordpress.org/plugins/publishrank/";
-export const PUBLISHRANK_VERSION = "2.21.0";
-export const DOWNLOAD_URL =
-  "https://github.com/Umarjaum/PublishRank/releases/download/v2.21.0/PublishRank-2.21.0-404-fix.zip";
+export const PUBLISHRANK_VERSION = "2.25.0";
+export const DOWNLOAD_URL = "https://downloads.wordpress.org/plugin/publishrank.2.25.0.zip";
 export const GITHUB_URL = "https://github.com/Umarjaum";
 
 export const SOCIALS = {

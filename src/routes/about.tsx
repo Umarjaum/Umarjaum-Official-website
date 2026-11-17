@@ -115,14 +115,15 @@ function About() {
                 documentation that stays close to the actual product.
               </p>
               <p>
-                PublishRank is the clearest expression of that approach so far: a free, open-source
-                WordPress SEO plugin for publishers, newsrooms, magazines and content-heavy sites —
-                now listed on WordPress.org.
+                PublishRank is the clearest expression of that approach so far: free, open-source
+                WordPress SEO for businesses, stores, publishers and every kind of site, with Local
+                SEO for 134 selectable business options. The WordPress.org listing currently serves
+                an experimental 2.24.0 candidate, not a production release.
               </p>
               <p>
-                The goal is not to promise rankings. The goal is to help a publishing team own its
-                technical foundation: metadata, schema, sitemaps, redirects, crawl controls and
-                editorial workflow.
+                The goal is not to promise rankings. The goal is to help site owners and teams own a
+                technical foundation: metadata, schema, sitemaps, redirects and crawl controls, with
+                editorial workflows for teams that publish regularly.
               </p>
             </div>
           </article>

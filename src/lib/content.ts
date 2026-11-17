@@ -109,7 +109,7 @@ export const workflow = [
 export const stats: { value?: number; display?: string; suffix?: string; label: string }[] = [
   { value: 41, suffix: "+", label: "Built-in SEO tools" },
   { value: 100, suffix: "%", label: "Free & open source" },
-  { display: "v2.21.0", label: "Current PublishRank release" },
+  { display: "v2.25.0", label: "Experimental candidate · staging only" },
   { value: 0, label: "Ads or trackers on this site" },
 ];
 
@@ -124,7 +124,7 @@ export const faqs = [
   ],
   [
     "Is PublishRank on WordPress.org?",
-    "Yes. PublishRank is listed in the official WordPress.org plugin directory, so it can be installed directly from the WordPress dashboard or downloaded from its GitHub releases.",
+    "Yes. WordPress.org currently lists PublishRank 2.25.0 as an experimental candidate, not a production release. Do not install it on a live site; use an isolated staging environment only. The GitHub release archive is a separate, older version.",
   ],
   [
     "How does a background in physics shape the work?",
