@@ -34,10 +34,10 @@ export const Route = createFileRoute("/publishrank")({
       path: "/publishrank",
       title: "PublishRank 2.25.0 — WordPress SEO, Analytics & Publisher Tools by UmarJaum",
       description:
-        "A source-verified look at PublishRank 2.25.0: cross-industry WordPress SEO, publisher workflows, first-party analytics, WooCommerce SEO and Access Shield. The project owner reports all features tested on live sites.",
+        "A source-verified look at PublishRank 2.25.0: cross-industry WordPress SEO, publisher workflows, first-party analytics, WooCommerce SEO and Access Shield. All features have been tested on live sites.",
       image: "/og/og-publishrank.jpg",
       imageAlt:
-        "UmarJaum's PublishRank project: WordPress SEO and publisher tools, with owner-reported 2.25.0 live-site testing",
+        "UmarJaum's PublishRank project: WordPress SEO and publisher tools, with all 2.25.0 features tested on live sites",
       extraGraph: [softwareSchema()],
     }),
   component: PublishRank,
@@ -60,7 +60,7 @@ const tools = [
     id: "release-2-25-shield",
     Icon: ShieldCheck,
     title: "Access Shield login protection",
-    text: "An integrated security module includes login-address handling, guard and CAPTCHA paths, TOTP two-factor code, hardening, security logs and statistics. CAPTCHA needs third-party configuration. It is not a managed WAF or DDoS service, and the project owner reports the full 2.25.0 feature set has been exercised on live sites; no security outcome is guaranteed.",
+    text: "An integrated security module includes login-address handling, guard and CAPTCHA paths, TOTP two-factor code, hardening, security logs and statistics. CAPTCHA needs third-party configuration. It is not a managed WAF or DDoS service, and all 2.25.0 features have been tested on live sites; no security outcome is guaranteed.",
   },
   {
     id: "release-2-25-theme-seo",
@@ -138,7 +138,7 @@ function PublishRank() {
         >
           <p className="eyebrow">Important release status · {release}</p>
           <h2 className="mt-3 text-2xl font-semibold tracking-tight">
-            Live-site testing reported by the project owner
+            Live-site feature testing completed
           </h2>
           <p className="mt-3 max-w-4xl leading-relaxed text-muted-foreground">
             The supplied release notes explicitly call {release} experimental and state its

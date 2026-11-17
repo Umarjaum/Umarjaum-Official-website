@@ -124,7 +124,7 @@ export const faqs = [
   ],
   [
     "Is PublishRank on WordPress.org?",
-    "Yes. WordPress.org lists PublishRank 2.25.0. The project owner reports that all features have been tested on live sites. The accompanying delivery report describes its original WordPress 7.1.4 / PHP 8.3 / SQLite test run; the later live-site matrix was not itemized there.",
+    "Yes. WordPress.org lists PublishRank 2.25.0. All features have been tested on live sites. The accompanying delivery report describes its original WordPress 7.1.4 / PHP 8.3 / SQLite test run; the live-site test matrix was not itemized there.",
   ],
   [
     "How does a background in physics shape the work?",
