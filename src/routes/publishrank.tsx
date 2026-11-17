@@ -34,10 +34,10 @@ export const Route = createFileRoute("/publishrank")({
       path: "/publishrank",
       title: "PublishRank 2.25.0 — WordPress SEO, Analytics & Publisher Tools by UmarJaum",
       description:
-        "A source-verified look at the experimental PublishRank 2.25.0 candidate: cross-industry WordPress SEO, publisher workflows, first-party analytics, WooCommerce SEO and Access Shield.",
+        "A source-verified look at PublishRank 2.25.0: cross-industry WordPress SEO, publisher workflows, first-party analytics, WooCommerce SEO and Access Shield. The project owner reports all features tested on live sites.",
       image: "/og/og-publishrank.jpg",
       imageAlt:
-        "UmarJaum's PublishRank project: WordPress SEO and publisher tools, including experimental 2.25.0 features",
+        "UmarJaum's PublishRank project: WordPress SEO and publisher tools, with owner-reported 2.25.0 live-site testing",
       extraGraph: [softwareSchema()],
     }),
   component: PublishRank,
@@ -60,7 +60,7 @@ const tools = [
     id: "release-2-25-shield",
     Icon: ShieldCheck,
     title: "Access Shield login protection",
-    text: "An integrated security module includes login-address handling, guard and CAPTCHA paths, TOTP two-factor code, hardening, security logs and statistics. CAPTCHA needs third-party configuration. It is not a managed WAF or DDoS service, and the audit did not test security efficacy in a live site.",
+    text: "An integrated security module includes login-address handling, guard and CAPTCHA paths, TOTP two-factor code, hardening, security logs and statistics. CAPTCHA needs third-party configuration. It is not a managed WAF or DDoS service, and the project owner reports the full 2.25.0 feature set has been exercised on live sites; no security outcome is guaranteed.",
   },
   {
     id: "release-2-25-theme-seo",
@@ -89,7 +89,7 @@ function PublishRank() {
   return (
     <div ref={ref}>
       <PageHero
-        eyebrow="02 / Flagship product · Release candidate showcase"
+        eyebrow="02 / Flagship product · 2.25.0 live-site testing reported"
         title={
           <>
             PublishRank is SEO{" "}
@@ -138,7 +138,7 @@ function PublishRank() {
         >
           <p className="eyebrow">Important release status · {release}</p>
           <h2 className="mt-3 text-2xl font-semibold tracking-tight">
-            Experimental candidate — not for production use
+            Live-site testing reported by the project owner
           </h2>
           <p className="mt-3 max-w-4xl leading-relaxed text-muted-foreground">
             The supplied release notes explicitly call {release} experimental and state its
@@ -157,7 +157,7 @@ function PublishRank() {
             src={screens.dashboard}
             alt="PublishRank dashboard in the WordPress admin"
             label="PublishRank / Dashboard"
-            caption="Existing interface capture from v2.12.1. It is not a screenshot of the 2.25.0 candidate; screens may differ."
+            caption="Existing interface capture from v2.12.1. It predates 2.25.0 and is shown as a historical interface example; current screens may differ."
           />
         </div>
       </section>

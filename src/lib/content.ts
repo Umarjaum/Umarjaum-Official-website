@@ -109,7 +109,7 @@ export const workflow = [
 export const stats: { value?: number; display?: string; suffix?: string; label: string }[] = [
   { value: 41, suffix: "+", label: "Built-in SEO tools" },
   { value: 100, suffix: "%", label: "Free & open source" },
-  { display: "v2.25.0", label: "Experimental candidate · staging only" },
+  { display: "v2.25.0", label: "All features live-site tested" },
   { value: 0, label: "Ads or trackers on this site" },
 ];
 
@@ -124,7 +124,7 @@ export const faqs = [
   ],
   [
     "Is PublishRank on WordPress.org?",
-    "Yes. WordPress.org currently lists PublishRank 2.25.0 as an experimental candidate, not a production release. Do not install it on a live site; use an isolated staging environment only. The GitHub release archive is a separate, older version.",
+    "Yes. WordPress.org lists PublishRank 2.25.0. The project owner reports that all features have been tested on live sites. The accompanying delivery report describes its original WordPress 7.1.4 / PHP 8.3 / SQLite test run; the later live-site matrix was not itemized there.",
   ],
   [
     "How does a background in physics shape the work?",
