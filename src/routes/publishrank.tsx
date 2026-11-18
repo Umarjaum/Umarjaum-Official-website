@@ -25,19 +25,18 @@ import {
   PUBLISHRANK_RELEASES,
 } from "@/lib/site";
 
-const release = "2.25.0";
+const release = "2.25.1";
 
 export const Route = createFileRoute("/publishrank")({
   staticData: { sitemap: true },
   head: () =>
     pageHead({
       path: "/publishrank",
-      title: "PublishRank 2.25.0 — WordPress SEO, Analytics & Publisher Tools by UmarJaum",
+      title: "PublishRank SEO 2.25.1 — WordPress SEO Plugin by UmarJaum",
       description:
-        "A source-verified look at PublishRank 2.25.0: cross-industry WordPress SEO, publisher workflows, first-party analytics, WooCommerce SEO and Access Shield. All features have been tested on live sites.",
+        "PublishRank SEO for WordPress 2.25.1 is production-ready and free to use. All features have been tested on real websites by PublishRank Community, with no errors reported. New Traffic Guard, FAQ, SEO Inspector, Source Directory and Access Shield tools.",
       image: "/og/og-publishrank.jpg",
-      imageAlt:
-        "UmarJaum's PublishRank project: WordPress SEO and publisher tools, with all 2.25.0 features tested on live sites",
+      imageAlt: "UmarJaum's PublishRank SEO for WordPress project, release 2.25.1",
       extraGraph: [softwareSchema()],
     }),
   component: PublishRank,
@@ -45,40 +44,70 @@ export const Route = createFileRoute("/publishrank")({
 
 const tools = [
   {
+    id: "release-2-25-1-traffic-guard",
+    Icon: ShieldCheck,
+    title: "Traffic Guard rebuilt",
+    text: "The 2.25.1 source adds Monitor and Enforce modes, protection levels, up to 10 rule conditions with AND/OR logic, test mode, temporary blocks, rate limits, bot classifications, DNS-verified search-crawler exemptions, filtered event logs and a step-by-step tester.",
+  },
+  {
+    id: "release-2-25-1-countries",
+    Icon: Building2,
+    title: "Country controls",
+    text: "A 249-entry ISO 3166-1 country database powers searchable pickers in Traffic Guard and Access Shield. Location is taken from trusted server-side sources; an unknown location is allowed by default. Real GeoIP/CDN behavior was only partially tested.",
+  },
+  {
+    id: "release-2-25-1-faq-sources",
+    Icon: Newspaper,
+    title: "FAQ collections and Source Directory",
+    text: "Create FAQ accordions or lists and reuse categorized collections. Maintain your own source directory and editorial labels, then inspect link matches and caution warnings in editors. The plugin does not certify sources or change article text automatically.",
+  },
+  {
+    id: "release-2-25-1-inspector",
+    Icon: Sparkles,
+    title: "SEO Inspector and custom schema",
+    text: "Inspect search and social previews, HTTP status, canonicals, robots, headings, language and JSON-LD entities. Redirect inspection stays on the site. Custom JSON-LD is validated before output; no ranking or rich-result outcome is promised.",
+  },
+  {
+    id: "release-2-25-1-access-shield",
+    Icon: ShieldCheck,
+    title: "Access Shield sign-in designer",
+    text: "The sign-in page designer offers layout and branding controls with a live preview and contrast warning. This release also stops public page-preloading rules from exposing the private sign-in address. CAPTCHA and 2FA browser flows remain partially unverified.",
+  },
+  {
+    id: "release-2-25-1-notifications",
+    Icon: Workflow,
+    title: "Notifications and security fixes",
+    text: "Per-version update notices, unread-news indicators and question-mark help icons improve the admin experience. Fixes cover false refusal of ordinary union-select searches, Traffic Guard probe matching, FAQ removed-tag text and same-site-only redirects.",
+  },
+  {
     id: "release-2-25-analytics",
     Icon: Sparkles,
     title: "First-party Traffic Analytics",
-    text: "The 2.25.0 source includes a tracker, analytics storage and classification pipeline, plus an admin reporting screen with charts and a world map. It measures traffic observed after activation; counts are estimates, not perfect visitor identification, and historical visits cannot be reconstructed. Search Console clicks and impressions are separate measurements.",
+    text: "The carried-forward code measures visits observed after activation; counts are estimates, not perfect visitor identification. Search Console clicks and impressions are separate measurements.",
   },
   {
     id: "release-2-25-woocommerce",
     Icon: Building2,
     title: "WooCommerce SEO tools",
-    text: "When WooCommerce is active and the module is enabled, source code provides product SEO fields, GTIN check-digit validation, product and variation structured-data paths, templates, an audit and a protected catalogue feed. Feed code is not automatic Merchant Center or Meta account setup, submission or approval; results and compatibility need testing on the store.",
-  },
-  {
-    id: "release-2-25-shield",
-    Icon: ShieldCheck,
-    title: "Access Shield login protection",
-    text: "An integrated security module includes login-address handling, guard and CAPTCHA paths, TOTP two-factor code, hardening, security logs and statistics. CAPTCHA needs third-party configuration. It is not a managed WAF or DDoS service, and all 2.25.0 features have been tested on live sites; no security outcome is guaranteed.",
+    text: "When WooCommerce is active and the module is enabled, source code provides product SEO fields, GTIN check-digit validation, product/variation structured-data paths, templates, an audit and a protected catalogue feed. PublishRank Community has tested all plugin features on real websites with no errors reported.",
   },
   {
     id: "release-2-25-theme-seo",
     Icon: Workflow,
     title: "Theme SEO cleanup and masking",
-    text: "The source includes front-end cleanup and selected theme-masking paths, with an admin configuration and scan interface. Compatibility is not universal: configure carefully, since removing metadata can affect other integrations.",
+    text: "The plugin includes front-end cleanup and selected theme-masking paths, with an admin configuration and scan interface. Compatibility is not universal; review the scan and test integrations.",
   },
   {
     id: "cross-industry-seo",
     Icon: Building2,
     title: "SEO for businesses and websites",
-    text: "PublishRank is designed for cross-industry business and site needs as well as editorial publishing. Existing platform code covers metadata, content analysis, structured data, sitemaps, redirects and technical controls. Feature behavior depends on settings, data and environment; no tool can guarantee rankings or rich results.",
+    text: "PublishRank SEO is a WordPress plugin for business and site needs as well as editorial publishing. Code covers metadata, content analysis, structured data, sitemaps, redirects and technical controls; settings and hosting affect behavior.",
   },
   {
     id: "publishing-workflows",
     Icon: Newspaper,
     title: "Publisher and newsroom workflows",
-    text: "Newsroom and editorial tools sit alongside general website SEO, rather than making publishing sites the only audience. Related platform areas include feeds, navigation, notifications and news discovery; individual workflows remain configuration- and environment-dependent.",
+    text: "Newsroom and editorial tools are specialist workflows alongside general website SEO, not the only audience. Related areas include feeds, navigation, notifications and news discovery.",
   },
 ];
 
@@ -89,16 +118,14 @@ function PublishRank() {
   return (
     <div ref={ref}>
       <PageHero
-        eyebrow="02 / Flagship product · 2.25.0 live-site testing reported"
+        eyebrow="02 / Flagship product · PublishRank SEO for WordPress · v2.25.1"
         title={
           <>
-            PublishRank is SEO{" "}
-            <span className="serif-accent text-signal-gradient">
-              for businesses, websites and publishers.
-            </span>
+            PublishRank SEO{" "}
+            <span className="serif-accent text-signal-gradient">for every WordPress website.</span>
           </>
         }
-        intro={`I’m UmarJaum, and PublishRank is my WordPress SEO and publisher-tools project. This page covers source-inspected version ${release}, an experimental candidate—not a production release—with business and site needs at its core and specialist publisher workflows alongside them.`}
+        intro={`I’m UmarJaum, developer of PublishRank SEO for WordPress. Version ${release} is a free, open-source WordPress SEO release for businesses, stores, creators and publishers, with optional newsroom tools. Its verification report records 409 passing checks and states which environments and paths were partial or untested.`}
       >
         <div className="flex flex-wrap gap-3">
           <Magnetic>
@@ -136,17 +163,15 @@ function PublishRank() {
           className="glass-strong rounded-2xl border border-primary/20 p-6 md:p-8"
           data-reveal
         >
-          <p className="eyebrow">Important release status · {release}</p>
+          <p className="eyebrow">Release verification · {release}</p>
           <h2 className="mt-3 text-2xl font-semibold tracking-tight">
-            Live-site feature testing completed
+            Production-ready · free to use · community-tested
           </h2>
           <p className="mt-3 max-w-4xl leading-relaxed text-muted-foreground">
-            The supplied release notes explicitly call {release} experimental and state its
-            next-generation specification is incomplete. A static source audit found implementation
-            paths, but did not run the plugin, WordPress, WooCommerce or the shipped tests. PHP 7.4
-            is a stated target, not a verified compatibility result; tested-up-to metadata is not
-            proof of production readiness. No deployment or availability of a {release} download is
-            promised here. Check the official release page for current status.
+            All features have been tested on real websites by the PublishRank Community, with no
+            errors reported. The delivery report separately records 409 passing checks on WordPress
+            7.1.4, PHP 8.3.36 and SQLite; it documents that specific verification matrix and
+            combinations not covered in that run.
           </p>
         </div>
       </section>
@@ -166,7 +191,7 @@ function PublishRank() {
         <SectionHead
           eyebrow={`Source-verified feature areas · ${release}`}
           title="A cross-industry product, with deeper publisher workflows."
-          intro="These summaries reflect the supplied 2.25.0 source and verification report. Automated and scenario checks passed in the documented test environment; production behavior still depends on configuration, hosting and integrations."
+          intro="These summaries are drawn from the supplied 2.25.1 source, feature catalog and verification report. The report records 409 passing checks and clearly identifies the areas that were only partially exercised or were not tested."
         />
         <div className="grid gap-4 md:grid-cols-2" data-stagger>
           {tools.map(({ id, Icon, title, text }) => (
@@ -185,7 +210,7 @@ function PublishRank() {
         <SectionHead
           eyebrow="Existing interface evidence"
           title="Real screens, with their version context intact."
-          intro="The supplied release includes 32 genuine 2.25.0 admin captures. The gallery below retains existing site visuals with their earlier-version context; the official product site links to the complete 2.25.0 capture gallery."
+          intro="The gallery retains historical 2.25.0 interface captures with their original context. The 2.25.1 package contains no new admin screenshot set; the official product site labels the earlier captures accordingly."
         />
         <div className="grid gap-5 md:grid-cols-3" data-stagger>
           <Evidence

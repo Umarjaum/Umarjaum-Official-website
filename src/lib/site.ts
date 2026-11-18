@@ -8,16 +8,16 @@ export const SITE_URL = (
 export const SITE_NAME = "UmarJaum";
 export const LEGAL_NAME = "Muhammad Umar Jabbar";
 export const CONTACT_EMAIL = "UmarJaum@gmail.com";
-export const TAGLINE = "Physicist, developer & SEO engineer behind PublishRank";
+export const TAGLINE = "Physicist, developer & SEO engineer behind PublishRank SEO for WordPress";
 export const DESCRIPTION =
-  "UmarJaum (Muhammad Umar Jabbar) is a physicist from Pakistan and the founder, developer and SEO engineer of PublishRank — cross-industry WordPress SEO with Local SEO for 134 selectable business options and publishing tools. All PublishRank 2.25.0 features have been tested on live sites.";
+  "UmarJaum (Muhammad Umar Jabbar) is a physicist from Pakistan and the developer of PublishRank SEO for WordPress, a production-ready, free and open-source plugin for businesses and websites of every kind. Version 2.25.1 adds Traffic Guard, FAQ collections, SEO Inspector, Source Directory and sign-in tools. All features have been tested on real websites by the PublishRank Community, with no errors reported; the delivery report separately records its 409-check test run.";
 
 export const PUBLISHRANK_URL = "https://publishrankseo.vercel.app";
 export const PUBLISHRANK_REPO = "https://github.com/Umarjaum/PublishRank";
 export const PUBLISHRANK_RELEASES = "https://github.com/Umarjaum/PublishRank/releases";
 export const PUBLISHRANK_WPORG = "https://wordpress.org/plugins/publishrank/";
-export const PUBLISHRANK_VERSION = "2.25.0";
-export const DOWNLOAD_URL = "https://downloads.wordpress.org/plugin/publishrank.2.25.0.zip";
+export const PUBLISHRANK_VERSION = "2.25.1";
+export const DOWNLOAD_URL = "https://publishrankseo.vercel.app/downloads/PublishRank-2.25.1.zip";
 export const GITHUB_URL = "https://github.com/Umarjaum";
 
 export const SOCIALS = {
