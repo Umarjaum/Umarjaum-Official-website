@@ -100,7 +100,7 @@ function Work() {
         <SectionHead
           eyebrow="A real interface, not a mockup"
           title="Evidence matters."
-          intro={`These real WordPress-admin captures are from PublishRank 2.12.1; the current release is ${PUBLISHRANK_VERSION}, so some screens may differ.`}
+          intro={`These WordPress-admin captures are from PublishRank ${PUBLISHRANK_VERSION}, taken on a local test site with demo content.`}
         />
         <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <div data-scale-in>

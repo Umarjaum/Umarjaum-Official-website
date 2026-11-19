@@ -1,29 +1,18 @@
-import dashboard from "@/assets/screens/01-publishrank-dashboard.png.asset.json";
-import features from "@/assets/screens/03-publishrank-features.png.asset.json";
-import sitemapHub from "@/assets/screens/07-publishrank-sitemap-hub.png.asset.json";
-import schema from "@/assets/screens/08-publishrank-schema-markup.png.asset.json";
-import searchConsole from "@/assets/screens/09-publishrank-search-console.png.asset.json";
-import llms from "@/assets/screens/17-publishrank-llms-txt.png.asset.json";
-import author from "@/assets/screens/19-publishrank-author-expertise.png.asset.json";
-import links from "@/assets/screens/22-publishrank-link-intelligence.png.asset.json";
-import seoScore from "@/assets/screens/28-publishrank-seo-score.png.asset.json";
-import analytics from "@/assets/screens/29-publishrank-analytics.png.asset.json";
-import newsroom from "@/assets/screens/34-publishrank-newsroom.png.asset.json";
-import calendar from "@/assets/screens/36-publishrank-newsroom-calendar.png.asset.json";
+const screen = (filename: string) => `/media/screens/publishrank-2.26.0/${filename}.jpg`;
 
 export const screens = {
-  dashboard: dashboard.url,
-  features: features.url,
-  sitemapHub: sitemapHub.url,
-  schema: schema.url,
-  searchConsole: searchConsole.url,
-  llms: llms.url,
-  author: author.url,
-  links: links.url,
-  seoScore: seoScore.url,
-  analytics: analytics.url,
-  newsroom: newsroom.url,
-  calendar: calendar.url,
+  dashboard: screen("publishrank-seo-dashboard"),
+  features: screen("publishrank-modules"),
+  sitemapHub: screen("publishrank-sitemap-health"),
+  schema: screen("publishrank-schema-studio"),
+  searchConsole: screen("publishrank-search-console"),
+  llms: screen("publishrank-llms-txt"),
+  author: screen("publishrank-author-expertise"),
+  links: screen("publishrank-seo-internal-links"),
+  seoScore: screen("publishrank-seo-score"),
+  analytics: screen("publishrank-analytics"),
+  newsroom: screen("uj-newsroom"),
+  calendar: screen("uj-newsroom-calendar"),
 };
 
 export const nav = [
@@ -104,12 +93,12 @@ export const workflow = [
     title: "Explain and ship",
     text: "Document the decision, test the result and leave the next person with a system they can trust.",
   },
-] as const;
+];
 
 export const stats: { value?: number; display?: string; suffix?: string; label: string }[] = [
   { value: 41, suffix: "+", label: "Built-in SEO tools" },
   { value: 100, suffix: "%", label: "Free & open source" },
-  { display: "v2.25.0", label: "All features live-site tested" },
+  { display: "v2.26.0", label: "Latest release" },
   { value: 0, label: "Ads or trackers on this site" },
 ];
 
@@ -124,7 +113,7 @@ export const faqs = [
   ],
   [
     "Is PublishRank on WordPress.org?",
-    "Yes. WordPress.org lists PublishRank 2.25.0. All features have been tested on live sites. The accompanying delivery report describes its original WordPress 7.1.4 / PHP 8.3 / SQLite test run; the live-site test matrix was not itemized there.",
+    "Yes. WordPress.org lists PublishRank 2.26.0. The supplied release reports document local tests on WordPress 7.1.5, PHP 8.4 and SQLite, and specify which environments and paths were not tested.",
   ],
   [
     "How does a background in physics shape the work?",

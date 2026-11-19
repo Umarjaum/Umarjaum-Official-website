@@ -141,7 +141,7 @@ function Home() {
                 src={screens.dashboard}
                 alt="PublishRank dashboard inside the WordPress admin"
                 label="PublishRank / Dashboard"
-                caption={`Interface capture from v2.12.1; the current release is v${PUBLISHRANK_VERSION}.`}
+                caption={`PublishRank ${PUBLISHRANK_VERSION} interface capture from a local test site with demo content.`}
                 className="shadow-[0_40px_120px_-30px_color-mix(in_oklab,var(--signal)_45%,transparent)]"
               />
             </div>
