@@ -170,7 +170,7 @@ function PublishRank() {
             <span className="serif-accent text-signal-gradient">for every WordPress website.</span>
           </>
         }
-        intro={`I’m UmarJaum, developer of PublishRank SEO for WordPress. Version ${release} is a free, open-source release for businesses, stores, creators and publishers, with optional newsroom tools. This update unifies the Gutenberg SEO sidebar, refines Schema Studio, and adds safer media migration and SEO maintenance workflows. The release report records tests on WordPress 7.1.5, PHP 8.3 and SQLite in a sandbox, not on a production host.`}
+        intro={`I’m UmarJaum, developer of PublishRank SEO for WordPress. Version ${release} is a free, open-source release for businesses, stores, creators and publishers, with optional newsroom tools. This update unifies the Gutenberg SEO sidebar, refines Schema Studio, and adds safer media migration and SEO maintenance workflows. The release report documents its specific sandbox scope; separately, I report feature checks passing on the latest WordPress and PHP versions tested across multiple business categories and news sites.`}
       >
         <div className="flex flex-wrap gap-3">
           <Magnetic>
@@ -223,7 +223,7 @@ function PublishRank() {
         >
           <p className="eyebrow">Release report · {release}</p>
           <h2 className="mt-3 text-2xl font-semibold tracking-tight">
-            Tested in a sandbox, not on a production host
+            Release report scope and additional maintainer testing
           </h2>
           <p className="mt-3 max-w-4xl leading-relaxed text-muted-foreground">
             The release report records WordPress 7.1.5, PHP 8.3, SQLite, PHP's built-in web server
@@ -233,11 +233,17 @@ function PublishRank() {
             against sandbox data only; this is not production-host testing.
           </p>
           <p className="mt-3 max-w-4xl leading-relaxed text-muted-foreground">
+            Separately, the maintainer reports testing the latest available WordPress and PHP
+            versions across multiple business categories and news sites, with feature checks working
+            as expected. This additional testing is distinct from the version-specific evidence in
+            the release report.
+          </p>
+          <p className="mt-3 max-w-4xl leading-relaxed text-muted-foreground">
             WooCommerce, page builders, multilingual plugins, real phones and Safari/Firefox were
             not tested; PHP 7.4 received only a static syntax scan. Search Console live sync was
             blocked by missing OAuth credentials. Accessibility checks were automated spot checks,
-            not a full WCAG audit. No compatibility beyond reported test coverage or search-ranking
-            outcome is claimed.
+            not a full WCAG audit. The report retains these specific limits; site behavior can still
+            vary by hosting, theme and plugin combination, and no search-ranking outcome is claimed.
           </p>
         </div>
       </section>

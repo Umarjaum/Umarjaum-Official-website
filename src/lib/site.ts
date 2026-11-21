@@ -10,7 +10,7 @@ export const LEGAL_NAME = "Muhammad Umar Jabbar";
 export const CONTACT_EMAIL = "UmarJaum@gmail.com";
 export const TAGLINE = "Physicist, developer & SEO engineer behind PublishRank SEO for WordPress";
 export const DESCRIPTION =
-  "UmarJaum (Muhammad Umar Jabbar) is a physicist from Pakistan and the developer of PublishRank SEO for WordPress, a free and open-source plugin for businesses and websites of every kind. Version 2.26.1 refines the Gutenberg SEO sidebar and Schema Studio, adds safer media migration workflows and advanced 404 monitoring, and improves bulk SEO editing and video sitemap discovery. The release report records sandbox tests on WordPress 7.1.5, PHP 8.3 and SQLite; it does not report production-host testing.";
+  "UmarJaum (Muhammad Umar Jabbar) is the developer of PublishRank SEO for WordPress, a free, open-source plugin for businesses, publishers and websites of every kind. The maintainer reports feature checks passing on the latest WordPress and PHP versions tested across multiple business categories and news sites. The 2.26.1 report documents its own sandbox test scope and limits.";
 
 export const PUBLISHRANK_URL = "https://publishrankseo.vercel.app";
 export const PUBLISHRANK_VIDEO = `${PUBLISHRANK_URL}/video`;
