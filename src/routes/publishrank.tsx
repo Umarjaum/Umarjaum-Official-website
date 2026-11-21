@@ -19,30 +19,75 @@ import { Spotlight } from "@/components/site/Spotlight";
 import { featureGallery, screens } from "@/lib/content";
 import { pageHead, softwareSchema } from "@/lib/seo";
 import {
+  DOWNLOAD_URL,
+  PUBLISHRANK_RELEASE_REPORT,
   PUBLISHRANK_REPO,
   PUBLISHRANK_URL,
+  PUBLISHRANK_VIDEO,
   PUBLISHRANK_WPORG,
   PUBLISHRANK_RELEASES,
 } from "@/lib/site";
 
-const release = "2.26.0";
+const release = "2.26.1";
 
 export const Route = createFileRoute("/publishrank")({
   staticData: { sitemap: true },
   head: () =>
     pageHead({
       path: "/publishrank",
-      title: "PublishRank SEO 2.26.0 — WordPress SEO Plugin by UmarJaum",
+      title: "PublishRank SEO 2.26.1 — WordPress SEO Plugin by UmarJaum",
       description:
-        "PublishRank SEO for WordPress 2.26.0 adds Schema Studio for 246 Schema.org types, diagnostics, Local SEO for up to 50 locations and improved multilingual content handling. Review the release test reports and their stated limits.",
+        "PublishRank SEO 2.26.1 refines the Gutenberg SEO sidebar and Schema Studio, adds safe media migration and advanced 404 workflows, and improves bulk SEO editing and video sitemap discovery. See the test scope and limits.",
       image: "/og/og-publishrank.jpg",
-      imageAlt: "UmarJaum's PublishRank SEO for WordPress project, release 2.26.0",
+      imageAlt: "UmarJaum's PublishRank SEO for WordPress project, release 2.26.1",
       extraGraph: [softwareSchema()],
     }),
   component: PublishRank,
 });
 
 const tools = [
+  {
+    id: "gutenberg-sidebar",
+    Icon: Workflow,
+    title: "One persistent Gutenberg SEO sidebar",
+    text: "SEO, Social, Schema, Advanced and Insights tabs bring the editor tools together. Toolbar and Options-menu entries, saved display preferences and remembered sections make the panel discoverable; the duplicate below-editor boxes are removed on block-editor screens.",
+  },
+  {
+    id: "schema-studio-refinements",
+    Icon: Sparkles,
+    title: "A clearer Schema Studio workflow",
+    text: "Searchable type categories, Basic and Advanced modes, guided properties with examples, and clearer validation separate Schema.org validity from Google requirements and recommendations. Valid JSON-LD is not presented as a rich-result or ranking promise.",
+  },
+  {
+    id: "media-link-manager",
+    Icon: ShieldCheck,
+    title: "Safer media URL migrations",
+    text: "Media Link Manager plans and previews changes before applying them, checks collisions, verifies results and supports rollback. Ambiguous or unsupported references are reported rather than guessed.",
+  },
+  {
+    id: "advanced-404-monitor",
+    Icon: ShieldCheck,
+    title: "More context in the 404 Monitor",
+    text: "The monitor distinguishes internal broken links from external referrals, records referring host and path without an IP address, explains likely causes, and offers one-click redirects only for high-confidence fixes.",
+  },
+  {
+    id: "bulk-seo-editor",
+    Icon: Workflow,
+    title: "A more reviewable Bulk SEO Editor",
+    text: "Inline SEO edits include filters, a review step, validation, conflict protection, change history with undo, and CSV import/export safeguards. Formula-sensitive spreadsheet values are protected.",
+  },
+  {
+    id: "video-sitemap-discovery",
+    Icon: Newspaper,
+    title: "Improved video sitemap discovery",
+    text: "YouTube and Vimeo videos from Embed blocks and pasted links are discovered more reliably. YouTube's own thumbnail is used; entries without a thumbnail are skipped, and third-party upload dates are not guessed.",
+  },
+  {
+    id: "responsive-accessibility",
+    Icon: ShieldCheck,
+    title: "Responsive and accessibility refinements",
+    text: "The release consolidates responsive breakpoints and improves visible focus, target sizing, reduced-motion and forced-colours handling. Automated touch-target and contrast checks were spot checks, not a full WCAG audit.",
+  },
   {
     id: "schema-studio",
     Icon: Sparkles,
@@ -118,16 +163,21 @@ function PublishRank() {
   return (
     <div ref={ref}>
       <PageHero
-        eyebrow="02 / Flagship product · PublishRank SEO for WordPress · v2.26.0"
+        eyebrow="02 / Flagship product · PublishRank SEO for WordPress · v2.26.1"
         title={
           <>
             PublishRank SEO{" "}
             <span className="serif-accent text-signal-gradient">for every WordPress website.</span>
           </>
         }
-        intro={`I’m UmarJaum, developer of PublishRank SEO for WordPress. Version ${release} is a free, open-source release for businesses, stores, creators and publishers, with optional newsroom tools. The supplied reports document local WordPress 7.1.5 / PHP 8.4 / SQLite tests and identify environments and paths not covered.`}
+        intro={`I’m UmarJaum, developer of PublishRank SEO for WordPress. Version ${release} is a free, open-source release for businesses, stores, creators and publishers, with optional newsroom tools. This update unifies the Gutenberg SEO sidebar, refines Schema Studio, and adds safer media migration and SEO maintenance workflows. The release report records tests on WordPress 7.1.5, PHP 8.3 and SQLite in a sandbox, not on a production host.`}
       >
         <div className="flex flex-wrap gap-3">
+          <Magnetic>
+            <a href={DOWNLOAD_URL} className={ctaVariants({ variant: "signal", size: "lg" })}>
+              Download v{release} <ArrowUpRight className="size-4" />
+            </a>
+          </Magnetic>
           <Magnetic>
             <a
               href={PUBLISHRANK_WPORG}
@@ -154,6 +204,14 @@ function PublishRank() {
           >
             <Github className="size-4" /> View source
           </a>
+          <a
+            href={PUBLISHRANK_VIDEO}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={ctaVariants({ variant: "glass", size: "lg" })}
+          >
+            Watch release video <ArrowUpRight className="size-4" />
+          </a>
         </div>
       </PageHero>
 
@@ -163,14 +221,23 @@ function PublishRank() {
           className="glass-strong rounded-2xl border border-primary/20 p-6 md:p-8"
           data-reveal
         >
-          <p className="eyebrow">Release verification · {release}</p>
+          <p className="eyebrow">Release report · {release}</p>
           <h2 className="mt-3 text-2xl font-semibold tracking-tight">
-            Production-ready · free to use · community-tested
+            Tested in a sandbox, not on a production host
           </h2>
           <p className="mt-3 max-w-4xl leading-relaxed text-muted-foreground">
-            The 2.26.0 report set covers 40 representative URLs, 134 of 134 Local SEO business
-            types, the 246-type Schema Studio catalog and 50 admin screens. Tests ran on local
-            WordPress 7.1.5 / PHP 8.4 / SQLite sites; the reports list combinations not tested.
+            The release report records WordPress 7.1.5, PHP 8.3, SQLite, PHP's built-in web server
+            and headless Chromium on a sandbox site. It documents passing tests for the Gutenberg
+            and Classic Editor paths, media migration and rollback, bulk editing, 404 workflows,
+            video sitemap discovery and responsive checks. The 2.26.0-to-2.26.1 upgrade was tested
+            against sandbox data only; this is not production-host testing.
+          </p>
+          <p className="mt-3 max-w-4xl leading-relaxed text-muted-foreground">
+            WooCommerce, page builders, multilingual plugins, real phones and Safari/Firefox were
+            not tested; PHP 7.4 received only a static syntax scan. Search Console live sync was
+            blocked by missing OAuth credentials. Accessibility checks were automated spot checks,
+            not a full WCAG audit. No compatibility beyond reported test coverage or search-ranking
+            outcome is claimed.
           </p>
         </div>
       </section>
@@ -181,16 +248,16 @@ function PublishRank() {
             src={screens.dashboard}
             alt="PublishRank dashboard in the WordPress admin"
             label="PublishRank / Dashboard"
-            caption="PublishRank 2.26.0 dashboard capture from a local test site with demo content."
+            caption="Historical PublishRank 2.26.0 dashboard capture from a local test site with demo content; it is not a 2.26.1 screenshot."
           />
         </div>
       </section>
 
       <section className="wrap py-16 md:py-24">
         <SectionHead
-          eyebrow={`Source-verified feature areas · ${release}`}
+          eyebrow={`Release changes and product capabilities · ${release}`}
           title="A cross-industry product, with deeper publisher workflows."
-          intro="These summaries are drawn from the supplied 2.26.0 package and reports. The reports document test environments and distinguish tested areas from combinations that were not covered."
+          intro="The first cards describe 2.26.1 changes from the supplied release report; the remaining cards describe carried-forward product areas. The report distinguishes verified workflows from partial, blocked and untested areas."
         />
         <div className="grid gap-4 md:grid-cols-2" data-stagger>
           {tools.map(({ id, Icon, title, text }) => (
@@ -207,9 +274,9 @@ function PublishRank() {
 
       <section className="wrap py-16 md:py-24">
         <SectionHead
-          eyebrow="2.26.0 interface evidence"
-          title="Current screens, with their test context intact."
-          intro="The supplied documentation includes 50 unannotated desktop admin captures from PublishRank 2.26.0. Images below are local test-site screenshots with demo data, not customer or production records."
+          eyebrow="Historical 2.26.0 interface evidence"
+          title="Earlier screens, with their test context intact."
+          intro="These retained captures are from PublishRank 2.26.0, not new 2.26.1 screenshots. They are local test-site screenshots with demo data, not customer or production records."
         />
         <div className="grid gap-5 md:grid-cols-3" data-stagger>
           <Evidence
@@ -283,6 +350,14 @@ function PublishRank() {
               className={ctaVariants({ variant: "glass", size: "lg" })}
             >
               Releases and availability <ArrowUpRight className="size-4" />
+            </a>
+            <a
+              href={PUBLISHRANK_RELEASE_REPORT}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={ctaVariants({ variant: "glass", size: "lg" })}
+            >
+              Read full 2.26.1 test report <ArrowUpRight className="size-4" />
             </a>
           </div>
         </div>
