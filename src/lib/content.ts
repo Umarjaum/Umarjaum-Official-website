@@ -98,7 +98,7 @@ export const workflow = [
 export const stats: { value?: number; display?: string; suffix?: string; label: string }[] = [
   { value: 41, suffix: "+", label: "Built-in SEO tools" },
   { value: 100, suffix: "%", label: "Free & open source" },
-  { display: "v2.26.1", label: "Latest release" },
+  { display: "v2.26.2", label: "Latest release" },
   { value: 0, label: "Ads or trackers on this site" },
 ];
 
@@ -113,7 +113,7 @@ export const faqs = [
   ],
   [
     "Is PublishRank on WordPress.org?",
-    "PublishRank has a WordPress.org listing and its current downloadable release is 2.26.1. The 2.26.1 release report records tests on WordPress 7.1.5, PHP 8.3 and SQLite on a sandbox site, not a production host. It distinguishes verified workflows from partial, blocked and untested areas; compatibility beyond those stated tests is not claimed.",
+    "PublishRank has a WordPress.org listing and its current downloadable release is 2.26.2. The included validation report records checks on WordPress 7.1.5, PHP 8.3 and SQLite on a sandbox site, not a production host, and lists untested runtimes and areas. WordPress 6.3 and PHP 7.4 were not runtime-tested in that report.",
   ],
   [
     "How does a background in physics shape the work?",
